@@ -1,0 +1,64 @@
+.container {
+    margin-bottom: 50px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.imageContainer {
+    flex: 1;
+    height: 350px;
+    position: relative;
+}
+
+.image {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.detail {
+    display: flex;
+    gap: 5px;
+}
+
+.date {
+    color: gray;
+}
+
+.category {
+    color: crimson;
+    font-weight: 500;
+}
+
+.desc {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--softTextColor);
+}
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    /* Hide border initially */
+    height: 2px;
+    background: crimson;
+    transition: width 0.4s ease;
+}
+
+.link:hover::after {
+    width: 85px;
+    /* Show border on hover */
+}
